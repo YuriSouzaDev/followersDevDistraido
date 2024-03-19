@@ -1,0 +1,36 @@
+.follower-item {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  position: relative;
+  height: 100%;
+}
+
+.ball {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  position: absolute;
+  background: #90ee90;
+  opacity: 0;
+  animation: opacity 0.3s ease-in-out forwards,
+    bounceY 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes bounceY {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100vh);
+  }
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
